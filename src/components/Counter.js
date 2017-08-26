@@ -1,14 +1,19 @@
 //import liraries
 import React, { Component } from 'react';
-import { Text, ActivityIndicator, View, StyleSheet } from 'react-native';
+import { Text, Button, ActivityIndicator, View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux'
+import * as action from '../action'
 
 //Third create main component
 class Counter extends Component {
     render() {
-        return (
+        //Seven create detail and call action (this.props.object)
+        const {beforeSelect} = this.props
+        return (    
             <View style={styles.container}>
-                <Text>Counter</Text>
+                <Text>{beforeSelect}</Text>
+                <Button onPress = {() => this.props.select('SUM') } title="+"/>
+                <Button onPress = {() => this.props.select('MINUS') } title="-"/>
             </View>
         );
     }
@@ -24,5 +29,11 @@ const styles = StyleSheet.create({
     },
 });
 
-//make this component available to the app
-export default Counter;
+//Five create mapStateToProps
+const mapStateToProps = state => {
+    return {
+        beforeSelect: state.beforeSelect
+    }
+}
+//Six create connect mapStateToProps
+export default connect(mapStateToProps, action)(Counter);
