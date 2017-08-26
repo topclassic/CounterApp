@@ -1,4 +1,4 @@
-//Five Create Switch case
+//Second Create Switch case
 export default (state = 0, action) =>{
     switch(action.type){
         case 'SUM':

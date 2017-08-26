@@ -4,10 +4,10 @@ import { Text, Button, ActivityIndicator, View, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import * as action from '../action'
 
-//Third create main component
+//Seven create component and call action (this.props.object)
 class Counter extends Component {
     render() {
-        //Seven create detail and call action (this.props.object)
+        
         const {beforeSelect} = this.props
         return (    
             <View style={styles.container}>

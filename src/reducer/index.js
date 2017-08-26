@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 import typeOperator from './typeOperator'
-// Second create combineReducers 
+//Third
 export default combineReducers({
-    beforeSelect: typeOperator //Four
-    //test: () => [] //Second
+    beforeSelect: typeOperator  
+    //test: () => [] //default function
 })
