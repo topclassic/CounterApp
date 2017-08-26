@@ -10,8 +10,7 @@ import {createStore} from 'redux'
 import reducer from './reducer'
 import Counter from './components/Counter'
 
-// create a component
-// Four create store for keep reducer and create state in Provider
+//Four create store for keep reducer and create state in Provider
 const App = () => {
   return (
     <Provider store={createStore(reducer)}>

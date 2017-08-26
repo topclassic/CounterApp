@@ -4,7 +4,7 @@ import { Text, Button, ActivityIndicator, View, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import * as action from '../action'
 
-//Seven create component and call action (this.props.object)
+//Seven create component and call action (this.props)
 class Counter extends Component {
     render() {
         
